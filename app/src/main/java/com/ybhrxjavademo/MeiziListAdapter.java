@@ -79,6 +79,8 @@ public class MeiziListAdapter extends RecyclerView.Adapter<MeiziListAdapter.Meiz
                     Intent intent = new Intent(mActivity, ShowPicActivity.class);
                     intent.putExtra("imgUrl",IMG_URL);
                     mContext.startActivity(intent);
+                    //切换动画
+                    mActivity.overridePendingTransition(R.anim.slide_right_in,R.anim.slide_right_out);
                 }
             });
         }
