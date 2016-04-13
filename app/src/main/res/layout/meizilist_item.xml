@@ -5,19 +5,19 @@
 
     <ImageView
         android:id="@+id/mei_img"
-        android:layout_width="wrap_content"
-        android:src="@mipmap/test1"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
         android:layout_centerHorizontal="true"
-        android:layout_height="300dp" />
+        />
 
     <TextView
         android:id="@+id/img_desc"
         android:layout_width="wrap_content"
-        android:text="测试"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:layout_marginBottom="30dp"
+        android:text="测试"
         android:textColor="@android:color/holo_red_light" />
 
 </RelativeLayout>

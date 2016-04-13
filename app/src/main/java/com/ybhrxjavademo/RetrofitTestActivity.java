@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 
 import com.ybhrxjavademo.bean.MeiziDetail;
 import com.ybhrxjavademo.bean.MeiziResult;
@@ -14,7 +13,6 @@ import com.ybhrxjavademo.http.RetrofitY;
 
 import java.util.ArrayList;
 
-import rx.Observable;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Func1;
@@ -62,7 +60,6 @@ public class RetrofitTestActivity extends AppCompatActivity {
         });
 
         mRecycleview.addOnScrollListener(getScrollToBottomLisener(linearLayoutManager));
-
     }
 
     private RecyclerView.OnScrollListener getScrollToBottomLisener(final LinearLayoutManager linearLayoutManager) {
@@ -94,9 +91,7 @@ public class RetrofitTestActivity extends AppCompatActivity {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Subscriber<ArrayList<MeiziDetail>>() {
                     @Override
-                    public void onCompleted() {
-
-                    }
+                    public void onCompleted() {}
 
                     @Override
                     public void onError(Throwable e) {
