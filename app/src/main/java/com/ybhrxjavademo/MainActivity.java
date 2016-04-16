@@ -19,6 +19,7 @@ import com.ybhrxjavademo.bean.YUser;
 
 import java.util.ArrayList;
 import java.util.StringTokenizer;
+import java.util.concurrent.TimeUnit;
 
 import rx.Observable;
 import rx.Observer;
@@ -52,25 +53,46 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.next_bt).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,RetrofitTestActivity.class));
+                startActivity(new Intent(MainActivity.this, RetrofitTestActivity.class));
             }
         });
         bt_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                testObAndable();
-                testObAndable2();
+//                testObAndable2();
 //                testObservable();
 //                testThread();
 //                testMap();
 //                testFlatMap();
 
+                startActivity(new Intent(MainActivity.this,ShowViewActivity.class));
 
             }
         });
+
+//        Observable.timer(5, TimeUnit.SECONDS)
+//                .subscribe(new Subscriber<Long>() {
+//                    @Override
+//                    public void onCompleted() {
+//
+//                    }
+//
+//                    @Override
+//                    public void onError(Throwable e) {
+//
+//                    }
+//
+//                    @Override
+//                    public void onNext(Long aLong) {
+//                        Log.w("时间",aLong+"时间呀0");
+//                        startActivity(new Intent(MainActivity.this, RetrofitTestActivity.class));
+//                    }
+//                });
+
     }
 
-    private void testObAndable(){
+    private void testObAndable() {
         Observer<String> observer = new Observer<String>() {
 
             @Override
@@ -85,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onNext(String s) {
-                Log.w("observer",s);
+                Log.w("observer", s);
             }
         };
 
@@ -103,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void testObAndable2(){
+    private void testObAndable2() {
         Subscriber<String> subscriber = new Subscriber<String>() {
 
             @Override
@@ -118,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onNext(String s) {
-                Log.w("subscriber",s);
+                Log.w("subscriber", s);
             }
         };
 
@@ -135,7 +157,6 @@ public class MainActivity extends AppCompatActivity {
         */
 
     }
-
 
 
     private void testObservable() {

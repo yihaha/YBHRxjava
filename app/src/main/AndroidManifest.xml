@@ -18,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".RetrofitTestActivity" />
-        <activity android:name=".ShowPicActivity"></activity>
+        <activity android:name=".ShowPicActivity" />
+        <activity android:name=".ShowViewActivity"></activity>
     </application>
 
 </manifest>
