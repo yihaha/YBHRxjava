@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ybhrxjavademo.animation.AnimationTestActivity;
 import com.ybhrxjavademo.bean.YUser;
 
 import java.util.ArrayList;
@@ -31,7 +32,7 @@ import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText ed_1;
     private Button bt_1;
@@ -50,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
         bt_1 = (Button) findViewById(R.id.but_1);
         img_1 = (ImageView) findViewById(R.id.img_1);
         text_1 = (TextView) findViewById(R.id.text_1);
+        //进入动画页
+        findViewById(R.id.animation_id).setOnClickListener(this);
         findViewById(R.id.next_bt).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 //                testMap();
 //                testFlatMap();
 
-                startActivity(new Intent(MainActivity.this,ShowViewActivity.class));
+                startActivity(new Intent(MainActivity.this, ShowViewActivity.class));
 
             }
         });
@@ -273,5 +276,18 @@ public class MainActivity extends AppCompatActivity {
                 Log.w("课程", s);
             }
         });
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.animation_id:
+                startActivity(new Intent(MainActivity.this, AnimationTestActivity.class));
+                break;
+
+            default:
+
+                break;
+        }
     }
 }

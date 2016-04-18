@@ -19,7 +19,11 @@
         </activity>
         <activity android:name=".RetrofitTestActivity" />
         <activity android:name=".ShowPicActivity" />
-        <activity android:name=".ShowViewActivity"></activity>
+        <activity android:name=".ShowViewActivity" />
+        <activity android:name=".animation.AnimationTestActivity" />
+        <activity android:name=".animation.FramAnimationActivity" />
+        <activity android:name=".animation.TweenAniActivity" />
+        <activity android:name=".animation.ProterAniActivity"></activity>
     </application>
 
 </manifest>

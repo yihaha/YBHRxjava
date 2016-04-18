@@ -1,5 +1,7 @@
 package com.ybhrxjavademo.viewtest;
 
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -54,6 +56,7 @@ public class TestView extends View {
         mPaint.setColor(0xFFFF8C69);
         RectF rectF1 = new RectF(0, 0, mWidth * percentage / 100, mHeigth);
         canvas.drawRoundRect(rectF1, 10, 10, mPaint);
+
 
 
     }

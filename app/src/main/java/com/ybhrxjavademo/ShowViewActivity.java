@@ -1,5 +1,7 @@
 package com.ybhrxjavademo;
 
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -33,5 +35,12 @@ public class ShowViewActivity extends AppCompatActivity {
         mTestView = (TestView) findViewById(R.id.testview);
         mTestView.setView(50);
 
+//        ObjectAnimator rotation = ObjectAnimator.ofFloat(mTestView, "rotation", 0f, 360f);
+        ObjectAnimator rotation = ObjectAnimator.ofFloat(mTestView, "scaleY", 0.5f, 3f,1f);
+        rotation.setDuration(3000);
+        //下面两行配合起来会不断执行动画
+        rotation.setRepeatCount(ValueAnimator.INFINITE);
+        rotation.setRepeatMode(ValueAnimator.REVERSE);
+        rotation.start();
     }
 }
