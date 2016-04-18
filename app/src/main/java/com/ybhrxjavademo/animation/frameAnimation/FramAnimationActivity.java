@@ -1,4 +1,4 @@
-package com.ybhrxjavademo.animation;
+package com.ybhrxjavademo.animation.frameAnimation;
 
 import android.content.res.XmlResourceParser;
 import android.graphics.drawable.AnimationDrawable;

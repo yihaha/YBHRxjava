@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.ybhrxjavademo.R;
+import com.ybhrxjavademo.animation.frameAnimation.FramAnimationActivity;
+import com.ybhrxjavademo.animation.propertyAnimation.ProterAniActivity;
+import com.ybhrxjavademo.animation.tweenAnimation.TweenAniActivity;
 
 public class AnimationTestActivity extends AppCompatActivity implements View.OnClickListener {
 

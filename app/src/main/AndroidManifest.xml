@@ -21,9 +21,9 @@
         <activity android:name=".ShowPicActivity" />
         <activity android:name=".ShowViewActivity" />
         <activity android:name=".animation.AnimationTestActivity" />
-        <activity android:name=".animation.FramAnimationActivity" />
-        <activity android:name=".animation.TweenAniActivity" />
-        <activity android:name=".animation.ProterAniActivity"></activity>
+        <activity android:name=".animation.frameAnimation.FramAnimationActivity" />
+        <activity android:name=".animation.tweenAnimation.TweenAniActivity" />
+        <activity android:name=".animation.propertyAnimation.ProterAniActivity"></activity>
     </application>
 
 </manifest>
